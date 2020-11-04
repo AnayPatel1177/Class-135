@@ -17,3 +17,7 @@ function modelLoaded() {
     video.speed(1);
     video.volume(0);
 }
+function start() {
+    objectDetector = ml5.objectDetector('cocossd', modelLoaded);
+    document.getElementById("status").innerHTML = "Status = Detecting objects";
+}
